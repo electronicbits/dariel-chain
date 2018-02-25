@@ -1,2 +1,2 @@
 # ve-chain
-Blockchain development
+A node based blockchain
