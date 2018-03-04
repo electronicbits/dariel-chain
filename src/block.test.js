@@ -10,14 +10,13 @@ describe('Block',() => {
         block = Block.mineBlock(lastBlock, data);
     });
 
-    if('sets the data to match the input', () => {
+    it('sets the data to match the input', () => {
         expect(block.data).toEqual(data);
-        
     })
 
-    if('sets the lastHash to match the hash of the last block', () => {
+    it('sets the lastHash to match the hash of the last block', () => {
         expect(block.lastHash).toEqual(lastBlock.hash);
     });
 
-
+    
 });
