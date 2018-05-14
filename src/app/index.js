@@ -28,8 +28,8 @@ app.post('/mine', (req, res) => {
     res.redirect('/blocks');
 });
 
-console.log('here 1');
-app.listen(HTTP_PORT, () => console.log(`Listening on port ${HTTP_PORT}`)); //starts the web application
-console.log('here 2');
-p2pServer.listen(); //starts the websocket server
-console.log('here 3');
+//starts the web application
+app.listen(HTTP_PORT, () => console.log(`Listening on port ${HTTP_PORT}`)); 
+
+//starts the websocket server
+p2pServer.listen(); 

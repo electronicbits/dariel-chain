@@ -33,7 +33,6 @@ class P2pServer {
 
         this.messageHandler(socket);
         this.sendChain(socket);
-        // socket.send(JSON.stringify(this.blockchain.chain));
     }
 
     messageHandler(socket) {
