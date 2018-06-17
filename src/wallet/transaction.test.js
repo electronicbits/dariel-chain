@@ -59,7 +59,8 @@ describe('Transaction', () => {
         });
 
         it('outputs an amount for the next recipient', () => {
-            expect(transaction.outputs.find(output => output.address === nextRecipient).amount).toEqual(nextAmount);
+            expect(transaction.outputs.find(output => output.address === nextRecipient).amount)
+            .toEqual(nextAmount);
         });
     });
 });
