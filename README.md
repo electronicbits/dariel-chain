@@ -1,2 +1,2 @@
-# ve-chain
+# dariel-chain
 A node based blockchain
