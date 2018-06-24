@@ -51,14 +51,12 @@ class P2pServer {
                     this.transactionPool.updateOrAddTransaction(data.transaction);
                     break;
             }
-
-            this.blockchain.replaceChain(data);
         });
     }
 
     sendChain(socket) {
         socket.send(JSON.stringify({ 
-            type: MESSAGE_TYPES, 
+            type: MESSAGE_TYPES.chain, 
             chain:  this.blockchain.chain
         }));
     }
@@ -77,7 +75,7 @@ class P2pServer {
     }
 
     broadcastTransaction(transaction) {
-        this.sockets.forEach(socket => this.sendTransaction(socket));
+        this.sockets.forEach(socket => this.sendTransaction(socket, transaction));
     }
 }
 
