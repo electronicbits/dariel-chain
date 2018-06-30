@@ -39,8 +39,8 @@ describe('Transaction', () => {
             transaction = Transaction.newTransaction(wallet, recipient, amount);
         });
 
-        if('does not create the transaction', () => {
-            expect(transaction).toEqual(undefine);
+        it('does not create the transaction', () => {
+            expect(transaction).toEqual(undefined);
         });
     });
 
