@@ -39,7 +39,11 @@ class TransactionPool {
             }
 
             return transaction;
-        });
+            });
+    }
+
+    clear() {
+        this.transactions = [];
     }
 }
 
